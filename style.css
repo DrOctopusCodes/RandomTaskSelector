@@ -1,0 +1,53 @@
+.header {
+  padding: 1px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 20px;
+}
+.textarea{
+  resize: none;
+}
+
+.inputs {
+  padding: 10px;
+  text-align: left;
+  background: white;
+  color: black;
+  font-size: 30px;
+}
+
+.spinner {
+  padding: 50px;
+  background-color: lightblue;
+  width: 600px;
+  height: 300px;
+  overflow: scroll;
+}
+
+.output {
+  padding: 10px;
+  text-align: left;
+  background: white;
+  color: black;
+  font-size: 30px;
+}
+
+button{
+  padding: 10px;
+  text-align: center;
+  background: white;
+  color: black;
+  font-size: 25px;
+}
+/* top right bottom left padding */
+textarea{
+  padding: 0px 30px 5px 30px;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 10px;
+  /* margin-bottom: 10px; */
+  text-align: center;
+  background: white;
+  color: black;
+}

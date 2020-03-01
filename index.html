@@ -1,0 +1,59 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class = "header">
+  <h1>Random Task Selector</h1>
+</div>
+
+
+<div class = "inputs">
+  <label for="task_label">Enter a task</label>
+  <textarea id="task_ip"></textarea>
+  <button type="button" onclick="return addTask()">Add task</button>
+</div>
+
+
+
+<div class="spinner" id="spinner">
+</div>
+
+<div class = "output">
+  <button type="button" onclick="selectRandomTask()">Select Randomly</button>
+</div>
+
+</body>
+
+
+<script>
+var task
+var task_list = []
+function addTask(obj){
+  const div = document.createElement('div')
+  task_element = document.getElementById("task_ip")
+  task_row = task_element.value
+  if(task_row.length == 0){
+    alert("Please enter some text")
+  }
+  else{
+    div.innerHTML = task_row
+    document.getElementById('spinner').appendChild(div)
+    task_element.value = ""
+    task = {name: task_row}
+    task_list.push(task)
+    return task_list
+  }
+
+}
+
+function selectRandomTask(){
+  var total_tasks = task_list.length
+  if(total_tasks != 0){
+    var random =  Math.floor((Math.random()*total_tasks))
+    alert(task_list[random].name)
+  }
+
+}
+</script>
+</html>
